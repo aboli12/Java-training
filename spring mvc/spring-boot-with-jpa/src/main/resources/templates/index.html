@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<span th:text="${msg}" style="color:red"></span>
+<h2>Add Employee</h2>
+<form th:object="${emp}"  th:action="@{/storeemployee}" method="post">
+	<label>EId</label>
+	<input type="number" th:field="*{eid}"><br/>
+	<label>EName</label>
+	<input type="text" th:field="*{ename}"><br/>
+	<label>Salary</label>
+	<input type="number" th:field="*{salary}"><br/>
+	<input type="submit" th:value="${buttonValue}" name="submitButton"/>
+	<input type="reset" value="reset"/>
+</form>
+<hr/>
+<h2>Employees Details</h2>
+<table border="1">
+	<tr>
+		<th>EId</th>
+		<th>EName</th>
+		<th>Salary</th>
+		<th>Delete</th>
+		<th>Update</th>
+	</tr>
+	<tr th:each="e:${listofemployee}">
+		<td th:text="${e.eid}"></td>
+		<td th:text="${e.ename}"></td>
+		<td th:text="${e.salary}"></td>
+		<td><a th:href="@{/deleteemployee(eid=${e.eid})}">Delete</a></td>
+		<td><a th:href="@{/updateemployee(eid=${e.eid})}">Update</a></td>
+	</tr>
+</table>
+</body>
+</html>

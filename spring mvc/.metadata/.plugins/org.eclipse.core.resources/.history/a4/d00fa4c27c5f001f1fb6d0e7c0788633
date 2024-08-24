@@ -1,0 +1,14 @@
+package com.bean;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class Employee {
+	
+	@Id
+	private int eid;
+	private String ename;
+	private float salary;
+
+}
