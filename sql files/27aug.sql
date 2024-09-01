@@ -1,6 +1,7 @@
 show databases;
 create database cgi_db;
 use cgi_db;
+use cgi_account_db;
 show tables;
 create table product (
 pid int,
@@ -26,3 +27,8 @@ desc student;
 
 
 select * from employee;
+select * from account;
+
+select * from login;
+
+alter table login add column typeofuser varchar(20);
