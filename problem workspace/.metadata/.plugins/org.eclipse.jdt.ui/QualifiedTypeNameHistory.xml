@@ -7,4 +7,6 @@
     <fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="com.service.LoginService"/>
+    <fullyQualifiedTypeName name="com.repository.LoginRepository"/>
 </qualifiedTypeNameHistroy>
